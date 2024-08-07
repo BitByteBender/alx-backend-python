@@ -3,13 +3,13 @@
 
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
 async def async_generator() -> AsyncGenerator[float, None]:
     """
         Generates random numbers Async
     """
-    for n in range(10):
+    for _ in range(10):
         await asyncio.sleep(1)
-        yield random.uniform(0, 10)
+        yield random.random() * 10
