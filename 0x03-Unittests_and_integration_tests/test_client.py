@@ -69,6 +69,7 @@ class TestGithubOrgClient(unittest.TestCase):
 )
 class TestIntegrationGithubOrgClient(unittest.TestCase):
     """ Integration tests for GithubOrgClient """
+    """
     @classmethod
     def setUpClass(cls):
         """ Set up the class with mocked requests """
@@ -80,7 +81,7 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         }
         cls.get_patcher = patch('requests.get', **cfg)
         cls.mock = cls.get_patcher.start()
-    """
+    
     def test_public_repos(self):
         # Testing public_repos method
         cl = GithubOrgClient("google")
